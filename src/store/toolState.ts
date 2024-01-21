@@ -3,13 +3,13 @@
 import { makeAutoObservable } from "mobx";
 
 class ToolState {
-  tool = null;
+  tool: HTMLCanvasElement | null = null;
   constructor() {
     makeAutoObservable(this)
   }
 
   //Action, функция которая изменяет состояния
-  setTool(tool) {
+  setTool(tool: HTMLCanvasElement | null) {
     this.tool = tool
   }
 }
